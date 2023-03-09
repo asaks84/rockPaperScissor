@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo Ken Po</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div id="container" class="">
+
+        <!-- OPENING -->
+
+        <div id="openingScreen" class="opening flex">
+            <div>
+                <h1 class="title">are your ready...</h1>
+                <p>
+                    the most epic<br>
+                    battle of the century!!!
+                </p>
+                <h1 class="title">...to fight?!</h1>
+            </div>
+            <button class="opening startPlay">Let's Play!</button>
+        </div>
+
+        <!-- GAMEPLAY -->
+
+        <div id="theGame" class="displayNone hidden">
+            <div class="header flex">
+                <h1>Jo Ken Po</h1>
+
+                <div id="score" class="flex">
+                    <div id="playerPoints" class="flex">
+                        <div class="playerPoint"></div>
+                        <div class="playerPoint"></div>
+                        <div class="playerPoint"></div>
+                        <div class="playerPoint"></div>
+                        <div class="playerPoint"></div>
+                    </div>
+                    <h3>SCORE</h3>
+                    <div id="machinePoints" class="flex">
+                        <div class="machinePoint"></div>
+                        <div class="machinePoint"></div>
+                        <div class="machinePoint"></div>
+                        <div class="machinePoint"></div>
+                        <div class="machinePoint"></div>
+                    </div>
+                </div>
+
+                <div id="roundResult" class="flex">
+                    <p class="hidden"></p>
+                </div>
+
+                <div class="controls flex">
+                    <h3>.key controls</h3>
+                    <div class="keybind">
+                        <ul>
+                            <li class="controls"><span class="monospace"><kbd>A</kbd>: rock</span></li>
+                            <li class="controls"><span class="monospace"><kbd>S</kbd>: paper</span></li>
+                            <li class="controls"><span class="monospace"><kbd>D</kbd>: scissor</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixbottom">
+                <div id="contentPlayers" class="flex">
+
+                    <div id="player">
+                        <div id="playerChoices" class="flex">
+                            <div class="choiceBtn flex" data-key="65" data-value="Rock">
+                                <img src="./imgs/rockL.png" alt="" width="50" class="disabled">
+                            </div>
+                            <div class="choiceBtn flex" data-key="83" data-value="Paper">
+                                <img src="./imgs/paperL.png" alt="" width="50" class="disabled">
+                            </div>
+                            <div class="choiceBtn flex" data-key="68" data-value="Scissor">
+                                <img src="./imgs/scissorL.png" alt="" width="50" class="disabled">
+                            </div>
+                        </div>
+                        <img src="./imgs/person.png" alt="Player" width="50">
+                    </div>
+
+                    <div id="machine">
+                        <div id="machineChoice">
+                            <div class="slider"></div>
+                        </div><br>
+                        <img src="./imgs/machine.png" alt="Machine" width="180">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- RESULTS -->
+        <div id="endGame" class="flex hidden displayNone">
+            <div id="won" class="showResult flex hidden displayNone">
+                <div>
+                    <h1>You Win!</h1>
+                    <h2>Congratulations</h2>
+                    <div class="finalScore flex"></div>
+                </div>
+                <div class="flex">
+                    <img src="./imgs/alexWon.png" alt="" width="100" height="100">
+                    <div>
+                        <h3>Play again?</h3>
+                        <button class="restart">Replay</button>
+                    </div>
+                </div>
+
+                <p>This game is part of a JavaScript coding education by <a
+                        href="http://theodinproject.com">theOdinProject</a>.</p>
+            </div>
+            <div id="lost" class="showResult flex hidden displayNone">
+                <div>
+                    <h1>You Lost!</h1>
+                    <h2>I'm sorry!</h2>
+                    <div class="finalScore flex"></div>
+                </div>
+                <div class="flex">
+                    <img src="./imgs/alexLost.png" alt="" width="100" height="100">
+                    <div>
+                        <h3>Play again?</h3>
+                        <button class="restart">Replay</button>
+                    </div>
+                </div>
+
+                <p>This game is part of a JavaScript coding education by <a
+                        href="http://theodinproject.com">theOdinProject</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
